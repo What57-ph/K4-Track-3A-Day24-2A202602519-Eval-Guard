@@ -16,7 +16,7 @@ Commit dùng để đối chiếu working tree: `b9f8d5b53bc4f94899aa30fdc52c30b
 | --: | ---------------- | ----------- | ------------------------------------------------------------------------- | -------------------------------------------------------------- |
 |   1 | Nguyễn Công Vinh | 2A202602519 | Cá nhân thực hiện M1–M5, Phase A/B/C, tích hợp/chạy batch và soạn báo cáo | Người làm xác nhận; artifacts A/B/C; git author HEAD `b9f8d5b` |
 
-Người tích hợp/chạy batch/nộp link: Duong Duc Minh (người làm xác nhận); artifacts Phase A/B/C ghi `run_kind=live`.
+Người tích hợp/chạy batch/nộp link: Nguyễn Công Vinh (người làm xác nhận); artifacts Phase A/B/C ghi `run_kind=live`.
 
 ## Môi trường và chuẩn bị trước lớp
 
