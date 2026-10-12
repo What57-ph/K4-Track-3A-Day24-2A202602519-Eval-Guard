@@ -1,0 +1,210 @@
+{
+  "created_at": "2026-10-12T11:25:49.648234+00:00",
+  "run_kind": "live",
+  "models": {
+    "generation": [
+      "gpt-4o-mini-2024-07-18"
+    ],
+    "guard": [
+      "gpt-4o-mini"
+    ]
+  },
+  "samples": 20,
+  "warmup_runs": 2,
+  "percentile_method": "linear",
+  "rag_scope": "hybrid retrieval + reranking + live answer generation; raw M1 chunks, no M5 ingestion enrichment",
+  "index_scope": "in-memory dense index; persistent Qdrant collection was not modified",
+  "retrieval_encoder": "_HashingEncoder",
+  "reranker": "_LexicalReranker",
+  "allowed_request": {
+    "input_ms": {
+      "n_samples": 20,
+      "target_samples": 20,
+      "target_met": true,
+      "warmup_runs": 2,
+      "percentile_method": "linear",
+      "samples_ms": [
+        741.047,
+        684.0344,
+        711.5411,
+        653.642,
+        687.6846,
+        623.8919,
+        691.9641,
+        745.0873,
+        675.4106,
+        833.4911,
+        623.5813,
+        707.3763,
+        639.1116,
+        731.9744,
+        688.3721,
+        590.5863,
+        680.3483,
+        558.7166,
+        713.5058,
+        594.2393
+      ],
+      "p50_ms": 685.8595,
+      "p95_ms": 749.50749,
+      "p99_ms": 816.694378
+    },
+    "rag_ms": {
+      "n_samples": 20,
+      "target_samples": 20,
+      "target_met": true,
+      "warmup_runs": 2,
+      "percentile_method": "linear",
+      "samples_ms": [
+        1566.0558,
+        1168.288,
+        949.5347,
+        908.1859,
+        856.5179,
+        826.5902,
+        1130.871,
+        799.6559,
+        1490.8122,
+        986.6101,
+        1015.9003,
+        888.7492,
+        971.6812,
+        892.9644,
+        881.5792,
+        1279.275,
+        909.8609,
+        1158.1999,
+        907.9999,
+        862.0606
+      ],
+      "p50_ms": 929.6978,
+      "p95_ms": 1494.57438,
+      "p99_ms": 1551.759516
+    },
+    "output_ms": {
+      "n_samples": 20,
+      "target_samples": 20,
+      "target_met": true,
+      "warmup_runs": 2,
+      "percentile_method": "linear",
+      "samples_ms": [
+        675.3324,
+        683.4369,
+        654.564,
+        717.1937,
+        766.7231,
+        906.9752,
+        670.6732,
+        683.7996,
+        736.8064,
+        750.6722,
+        792.7308,
+        693.6972,
+        782.776,
+        673.5682,
+        714.7932,
+        605.6395,
+        797.0823,
+        637.4925,
+        863.6499,
+        799.671
+      ],
+      "p50_ms": 715.99345,
+      "p95_ms": 865.816165,
+      "p99_ms": 898.743393
+    },
+    "total_ms": {
+      "n_samples": 20,
+      "target_samples": 20,
+      "target_met": true,
+      "warmup_runs": 2,
+      "percentile_method": "linear",
+      "samples_ms": [
+        2982.4386,
+        2535.7633,
+        2315.6446,
+        2279.0265,
+        2310.93,
+        2357.4616,
+        2493.5123,
+        2228.5466,
+        2903.0327,
+        2570.7773,
+        2432.2163,
+        2289.8273,
+        2393.5737,
+        2298.5114,
+        2284.7484,
+        2475.5052,
+        2387.2951,
+        2354.4124,
+        2485.1607,
+        2255.975
+      ],
+      "p50_ms": 2372.37835,
+      "p95_ms": 2907.002995,
+      "p99_ms": 2967.351479
+    }
+  },
+  "clean_control": {
+    "attempts": 22,
+    "warmup_attempts": 2,
+    "blocked_count": 2,
+    "false_positive_rate": 0.08333333333333333,
+    "blocked_cases": [
+      {
+        "id": 107,
+        "reason": "nemo_input_rail",
+        "total_ms": 624.0546999997605
+      },
+      {
+        "id": 107,
+        "reason": "nemo_input_rail",
+        "total_ms": 715.6927999985783
+      }
+    ]
+  },
+  "pii_preflight": {
+    "fixture_candidates": 5,
+    "presidio_detected": 4,
+    "presidio_missed_ids": [
+      5
+    ]
+  },
+  "pii_short_circuit_request": {
+    "n_samples": 20,
+    "target_samples": 20,
+    "target_met": true,
+    "warmup_runs": 2,
+    "percentile_method": "linear",
+    "samples_ms": [
+      7.4859,
+      6.4234,
+      5.9471,
+      7.9675,
+      7.7839,
+      6.741,
+      6.3285,
+      7.1691,
+      9.6627,
+      6.7733,
+      6.3942,
+      7.3376,
+      7.149,
+      8.0688,
+      6.0785,
+      7.9443,
+      7.1323,
+      6.8471,
+      6.4862,
+      7.3603
+    ],
+    "p50_ms": 7.14065,
+    "p95_ms": 8.148495,
+    "p99_ms": 9.359859
+  },
+  "source_sha256": {
+    "clean_set_8.json": "d6cf840357436a5f327784bbf91c42b82013315e2661f2456bb223b29a101f10",
+    "adversarial_set_20.json": "6cb482968ec78947e90844ad7a40ac67f39274d0939507ca661fe42462943575"
+  }
+}
